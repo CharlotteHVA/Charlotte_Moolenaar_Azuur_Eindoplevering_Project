@@ -1,4 +1,4 @@
-Charlotte Moolenaar - Azuur Eindoplevering Project
+<h1>Charlotte Moolenaar - Azuur Eindoplevering Project</h1>
 
 Dit is mijn website voor de eindopdracht, gemaakt met HTML en CSS.
 
