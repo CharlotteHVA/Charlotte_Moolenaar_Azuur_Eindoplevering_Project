@@ -1,0 +1,405 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* 
+ * Structuur en notities 
+ * - Headlines en alineas zijn bovenaan geplaatst.
+ * - Afwijkende stijlen voor h1, h2 en paragrafen zijn gedefinieerd.
+ * - Compressie is toegepast op de afbeeldingen voor snellere laadtijden.
+ * - Alle overbodige code en afbeeldingen zijn verwijderd om de prestaties te verbeteren.
+ */
+
+/* Global Styles */
+body {
+    background-color: #FFF7E3;
+    color: #483111;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Typography */
+h1, h3, h4 {
+    font-size: 8vw;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2em;
+}
+
+p {
+    font-size: 5.9vw;
+    margin: 0;
+}
+
+h2 {
+    font-size: 10vw;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin: 0;
+    margin-bottom: 5vw;
+}
+
+h3 {
+    font-size: 10vw;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin: 0;
+    margin-bottom: 5vw;
+}
+
+/* Background Colors */
+.yellow {
+    background-color: #F6B91D;
+}
+
+.white {
+    background-color: #FFF7E3;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0 7vw;
+}
+
+header label {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+}
+
+header div img {
+    width: 20vw;
+}
+
+header label img {
+    width: 10vw;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    right: -110vw;
+    height: 100vh;
+    width: 100vw;
+    background-color: #F6B91D;
+    color: #483111;
+    padding-right: 7vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    transition: right 0.4s ease;
+}
+
+nav a {
+    color: #483111;
+    text-decoration: none;
+    font-size: 10vw;
+    font-weight: 500;
+    padding: 4vw 0;
+    transition: color 0.2s;
+}
+
+/* Input Checkbox for Navigation */
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ nav {
+    right: 0;
+}
+
+input[type="checkbox"]:checked ~ label {
+    position: fixed;
+    top: 4vw;
+    right: 7vw;
+}
+
+/* Footer */
+footer {
+    height: 90vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10vw 7vw;
+    background-color: #F6B91D;
+}
+
+footer section {
+    display: flex;
+    flex-flow: column;
+    height: fit-content;
+}
+
+footer h2 { 
+    font-size: 5.9vw;
+    margin: 0;
+}
+
+footer p {
+    font-size: 4vw;
+    margin-left: 3vw;
+}
+
+footer ul {
+    display: flex;
+    flex-flow: column;
+    list-style: none;
+    padding-left: 0;
+}
+
+footer li {
+    margin: 2.5vw 0;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 5.9vw;
+    font-weight: 400;
+    color: #483111;
+}
+
+/* Home Hero Section */
+.heroSection {
+    height: 86vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 7vw 10vw;
+}
+
+.heroSection h1 {
+    font-weight: 500;
+    font-size: 15vw;
+    margin: 0;
+    width: fit-content;
+    text-align: center;
+}
+
+.heroSection h2 { 
+    font-size: 8vw;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+}
+
+.heroSection h3 {
+    font-size: 8vw;
+    text-decoration: underline;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 4vw;
+}
+
+.heroSection img {
+    width: 110vw;
+}
+
+/* Links and Information in Main */
+main ul {
+    display: flex;
+    flex-flow: column;
+    list-style: none;
+    padding: 0;
+    margin-top: 3em;
+}
+
+main li {
+    display: flex;
+    border-top: 0.1em #C99718 solid;
+    padding: 1em 0;
+}
+
+main li:last-of-type {
+    border-bottom: 0.1em #C99718 solid;
+}
+
+main a {
+    color: #483111;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 5.5vw;
+}
+
+main li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-decoration: none;
+}
+
+main li a img {
+    border-radius: 0;
+    width: 6.5vw; 
+    height: 6.5vw; 
+    object-fit: contain;
+}
+
+/* Sections in Main */
+
+.overBijenhotels,
+.bijdrageSectie,
+.bijenhotelMaak {
+    display: flex;
+    flex-flow: column;
+    height: 90vh;
+    padding: 10vw 7vw;
+    background-color: #F6B91D;
+}
+
+.overBijenhotels a,
+.bijenhotelMaak a {
+    padding: 2vw 1vw;
+    margin-top: 8vw;
+    border: 0.2em solid #483111;
+    border-radius: 5em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.bijenhotelMaak {
+    background-color: #FFF7E3;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.bijenhotelMaak h2 {
+    font-size: 10vw;
+    margin: 0;
+}
+
+.bijenhotelMaak a {
+    margin-bottom: 10vw;
+}
+
+.bijenhotelMaak div {
+    height: 70%;
+    overflow: hidden;
+    border-radius: 2vw;
+}
+
+.bijenhotelMaak div img {
+    width: 140%;
+}
+
+.highlight {
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 10vw 7vw;
+    text-align: center;
+    background-color: #FFF7E3;
+
+    background-image: url(../images/bijenhotel_illustratie2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bijenProjecten {
+    height: fit-content;
+    display: flex;
+    flex-flow: column;
+    padding: 10vw 7vw;
+    background-color: #F6B91D;
+}
+
+/* Div in main */
+main > div {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10vw 7vw;
+    background-color: #FFF7E3;
+}
+
+main > div img {
+    border-radius: 2vw;
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* Overzicht titel op pagina's */
+.overzicht {
+    height: 10vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 11.5vw 7vw;
+}
+
+.overzicht h1 {
+    width: fit-content;
+
+    font-weight: 500;
+    font-size: 15vw;
+    margin: 0;
+    text-align: center;
+}
+
+.overzicht h2 { 
+    font-size: 8vw;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+}
+
+/* Projecten Background */
+.projectenAchtergrond {
+    height: 20vh;
+
+    background-image: url(../images/bijenhotel_illustratie1.png);
+    background-size: 80vw;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+/* Projecten Pagina */
+.projecten {
+    height: fit-content;
+    display: flex;
+    flex-flow: column;
+    padding: 0 7vw;
+    margin-bottom: 15vw;
+}
+
+.projecten li {
+    display: flex;
+    border-top: 0.1em #483111 solid;
+    padding: 1em 0;
+}
+
+.projecten li:last-of-type {
+    border-bottom: 0.1em #483111 solid;
+}
+
+.projecten li a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+}
